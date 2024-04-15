@@ -6,19 +6,14 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { Link } from 'react-router-dom';
-import { redirect } from "react-router-dom";
 import { router } from "./index.tsx"
 import { id } from "./id.tsx";
 
 function App() {
   const ratioDefaultValue = 5;
-  const [page, setPage] = useState('main');
   const [appartmentType, setAppartmentType] = useState("2BHK");
   const [corporationRatio, setCorporationRatio] = useState(5);
   const [borewellRatio, setBorewellRatio,] = useState(5);
-  const [addedpeople, setAddedPeople] = useState(0);
-  const [userID, setUserID] = useState("");
   const data = { appartmentType, corporationRatio, borewellRatio };
 
   function onChangeAppartmentType(event: ChangeEvent<HTMLInputElement>, value: string): void {
@@ -41,7 +36,6 @@ function App() {
       })
         .then(response => response.json())
         .then(data => {
-          setUserID(data.accountId);
           console.log(data.accountId);
           id.push(data.accountId);
           router.navigate("/water-accounts");

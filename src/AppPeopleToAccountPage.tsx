@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Container, TextField } from '@mui/material';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { id } from "./id.tsx";
 
 export default function AppartmentDetailsPage() {
   const [peopleAdded, setPeopleAdded] = useState("");
-  const [price, setPrice] = useState("");
-  const [waterUsage, setWaterUsage] = useState("");
-  let pathURL = useLocation().pathname
-  let splitPathURL = pathURL.split("/");
-  //let userID = splitPathURL[splitPathURL.length - 1];
 
   function handleAppPeople() {
     const userID = id[id.length - 1];

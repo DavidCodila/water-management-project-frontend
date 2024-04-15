@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import { useLocation } from 'react-router-dom';
 import { id } from './id.tsx';
 
 export default function PrintBill() {

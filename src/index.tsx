@@ -6,9 +6,8 @@ import {
 } from "react-router-dom";
 import "./styles.css";
 import CreateAccountPage from './CreateAccountPage.tsx';
-import AppartmentDetailsPage from './AppartmentDetailsPage.tsx';
-import PrintBill from "./PrintBill.tsx";
-import { id } from "./id.tsx";
+import AppPeopleToAccountPage from './AppPeopleToAccountPage.tsx';
+import PrintAccountBillPage from "./PrintAccountBillPage.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -17,11 +16,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "water-accounts",
-    element: <AppartmentDetailsPage />,
+    element: <AppPeopleToAccountPage />,
   },
   {
     path: "billPage",
-    element: <PrintBill />,
+    element: <PrintAccountBillPage />,
   }
 ]);
 
