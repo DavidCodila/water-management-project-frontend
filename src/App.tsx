@@ -7,6 +7,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Link } from 'react-router-dom';
+import { redirect } from "react-router-dom";
+import { router } from "./index.tsx"
 
 function App() {
   const ratioDefaultValue = 5;
@@ -28,8 +30,8 @@ function App() {
     setCorporationRatio(value);
     setBorewellRatio(maxSliderValue - value);
   }
-  function ButtonLink() {
-      fetch("http://localhost:81/water-accounts", {
+  function onCreateAccountButtonClick() {
+    fetch("http://localhost:81/water-accounts", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,11 +41,13 @@ function App() {
         .then(response => response.json())
         .then(data => {
           setUserID(data.accountId);
+          console.log(data.accountId);
+          router.navigate("/water-accounts");
         })
         .catch(error => {
+          console.log("Error occured")
           console.error(error);
         });
-    return <Link to={"/water-accounts/"+userID}><Button variant="contained" sx={{ display: "block", marginLeft: "auto" }}>Next</Button></Link>;
   }
 
   return (
@@ -61,7 +65,7 @@ function App() {
     </RadioGroup>
     <FormLabel id="water-ratio-label" sx={{ textAlign: "center", marginTop: 4, display: 'block' }}>Water Provider Ratio</FormLabel>
     <Slider defaultValue={ratioDefaultValue} sx={{ marginTop: 2 }} step={1} marks min={0} max={10} onChange={onChangeSlider} />
-    <ButtonLink />
+    <Button variant="contained" onClick = {onCreateAccountButtonClick} sx={{ display: "block", marginLeft: "auto" }}>Next</Button>
   </Container>
   );
 }

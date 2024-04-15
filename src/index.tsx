@@ -9,13 +9,13 @@ import App from './App.tsx';
 import AppartmentDetailsPage from './AppartmentDetailsPage.tsx';
 import PrintBill from "./PrintBill.tsx";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "water-accounts/2131241",
+    path: "water-accounts",
     element: <AppartmentDetailsPage />,
   },
   {
