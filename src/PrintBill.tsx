@@ -9,27 +9,25 @@ export default function PrintBill() {
   const [cost, setCost] = useState("");
 
   useEffect(() => {
-    const userID = id[id.length - 1];
-    var URL = "http://localhost:81/water-accounts/" + userID + "/bill";
-    fetch(URL, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(response => response.json())
-      .then(data => {
-        setWaterUser(JSON.stringify(data.waterUsage));
-        setCost(JSON.stringify(data.cost))
-      })
-      .catch(error => {
-        console.error(error);
-        setWaterUser("Error");
-        setCost("Error")
-      });
-      return () =>{
-      }
-  })
+        const userID = id[id.length - 1];
+        var URL = "http://localhost:81/water-accounts/" + userID + "/bill";
+        fetch(URL, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          setWaterUser(JSON.stringify(data.waterUsage));
+          setCost(JSON.stringify(data.cost))
+        })
+        .catch(error => {
+          console.error(error);
+          setWaterUser("Error");
+          setCost("Error")
+        });
+  }, [])
   return (
     <Container maxWidth="sm">
         <Typography variant="h3" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>

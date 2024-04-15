@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./styles.css";
-import App from './App.tsx';
+import CreateAccountPage from './CreateAccountPage.tsx';
 import AppartmentDetailsPage from './AppartmentDetailsPage.tsx';
 import PrintBill from "./PrintBill.tsx";
 import { id } from "./id.tsx";
@@ -13,7 +13,7 @@ import { id } from "./id.tsx";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <CreateAccountPage />,
   },
   {
     path: "water-accounts",
