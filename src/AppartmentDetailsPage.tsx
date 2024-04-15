@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, TextField } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
+import { id } from "./id.tsx";
 
 export default function AppartmentDetailsPage() {
   const [peopleAdded, setPeopleAdded] = useState("");
@@ -8,9 +9,10 @@ export default function AppartmentDetailsPage() {
   const [waterUsage, setWaterUsage] = useState("");
   let pathURL = useLocation().pathname
   let splitPathURL = pathURL.split("/");
-  let userID = splitPathURL[splitPathURL.length - 1];
+  //let userID = splitPathURL[splitPathURL.length - 1];
 
   function handleAppPeople() {
+    const userID = id[id.length - 1];
     console.log("User ID: " + userID);
     const peopleToAddJSON = {"peopleToAdd": peopleAdded}
     var URL = "http://localhost:81/water-accounts/" + userID;
@@ -33,7 +35,7 @@ export default function AppartmentDetailsPage() {
   }
 
   function ButtonLink() {
-    return <Link to={"/billPage/" + userID}><Button variant="contained">Print bill</Button></Link>;
+    return <Link to={"/billPage/"}><Button variant="contained">Print bill</Button></Link>;
   }
   
   return (

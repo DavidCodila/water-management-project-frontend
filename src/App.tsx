@@ -9,6 +9,7 @@ import '@fontsource/roboto/700.css';
 import { Link } from 'react-router-dom';
 import { redirect } from "react-router-dom";
 import { router } from "./index.tsx"
+import { id } from "./id.tsx";
 
 function App() {
   const ratioDefaultValue = 5;
@@ -42,6 +43,7 @@ function App() {
         .then(data => {
           setUserID(data.accountId);
           console.log(data.accountId);
+          id.push(data.accountId);
           router.navigate("/water-accounts");
         })
         .catch(error => {

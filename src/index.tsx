@@ -8,6 +8,7 @@ import "./styles.css";
 import App from './App.tsx';
 import AppartmentDetailsPage from './AppartmentDetailsPage.tsx';
 import PrintBill from "./PrintBill.tsx";
+import { id } from "./id.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
     element: <AppartmentDetailsPage />,
   },
   {
-    path: "billPage/2131241",
+    path: "billPage",
     element: <PrintBill />,
   }
 ]);
