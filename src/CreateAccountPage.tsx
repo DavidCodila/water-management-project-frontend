@@ -1,4 +1,3 @@
-import './App.css';
 import React, { ChangeEvent } from 'react';
 import { useState } from 'react';
 import { Button, Container, FormControlLabel, FormLabel, Radio, RadioGroup, Slider } from '@mui/material';
