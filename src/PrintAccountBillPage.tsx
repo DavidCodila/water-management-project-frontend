@@ -29,25 +29,25 @@ export default function PrintBill() {
   }, [])
   return (
     <Container maxWidth="sm">
-        <Typography variant="h3" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
-          Bill
+      <Typography variant="h3" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
+        Bill
+      </Typography>
+      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+        <Typography variant="h5" gutterBottom sx={{ display: 'inline', textAlign: 'center' }}>
+          Water (L)
         </Typography>
-        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
-          <Typography variant="h5" gutterBottom sx={{ display: 'inline', textAlign: 'center' }}>
-            Water (L)
-          </Typography>
-          <Typography variant="h5" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
-            Price ($)
-          </Typography>
-        </Box>
-        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
-          <Typography variant="h5" gutterBottom sx={{ display: 'inline', textAlign: 'center' }}>
-            {waterUsed}L
-          </Typography>
-          <Typography variant="h5" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
-            ${cost}
-          </Typography>
-        </Box>
-     </Container>
+        <Typography variant="h5" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
+          Price ($)
+        </Typography>
+      </Box>
+      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+        <Typography variant="h5" gutterBottom sx={{ display: 'inline', textAlign: 'center' }}>
+          {waterUsed}L
+        </Typography>
+        <Typography variant="h5" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
+          ${cost}
+        </Typography>
+      </Box>
+    </Container>
   )
 }

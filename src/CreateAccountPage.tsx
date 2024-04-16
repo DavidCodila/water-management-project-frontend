@@ -41,20 +41,18 @@ export default function CreateAccountPage() {
 
   return (
     <Container maxWidth="sm">
-    <FormLabel id="appartment-type-radio-buttons-group-label" sx={{ textAlign: "center", marginTop: 4, display: 'block' }}>Appartment Type</FormLabel>
-    <RadioGroup sx={{ textAlign: "center", marginTop: 1, display: 'block' }}
-      aria-labelledby="appartment-type-radio-buttons-group-label"
-      name="radio-buttons-group"
-      defaultValue="2BHK"
-      onChange={onChangeAppartmentType}
-    >
-      <FormControlLabel value="2BHK" control={<Radio />} label="2 BHK" />
-
-      <FormControlLabel value="3BHK" control={<Radio />} label="3 BHK" />
-    </RadioGroup>
-    <FormLabel id="water-ratio-label" sx={{ textAlign: "center", marginTop: 4, display: 'block' }}>Water Provider Ratio</FormLabel>
-    <Slider defaultValue={ratioDefaultValue} sx={{ marginTop: 2 }} step={1} marks min={0} max={10} onChange={onChangeSlider} />
-    <Button variant="contained" onClick = {onCreateAccountButtonClick} sx={{ display: "block", marginLeft: "auto" }}>Next</Button>
-  </Container>
+      <FormLabel id="appartment-type-radio-buttons-group-label" sx={{ textAlign: "center", marginTop: 4, display: 'block' }}>Appartment Type</FormLabel>
+      <RadioGroup sx={{ textAlign: "center", marginTop: 1, display: 'block' }}
+        aria-labelledby="appartment-type-radio-buttons-group-label"
+        name="radio-buttons-group"
+        defaultValue="2BHK"
+        onChange={onChangeAppartmentType}>
+        <FormControlLabel value="2BHK" control={<Radio />} label="2 BHK" />
+        <FormControlLabel value="3BHK" control={<Radio />} label="3 BHK" />
+      </RadioGroup>
+      <FormLabel id="water-ratio-label" sx={{ textAlign: "center", marginTop: 4, display: 'block' }}>Water Provider Ratio</FormLabel>
+      <Slider defaultValue={ratioDefaultValue} sx={{ marginTop: 2 }} step={1} marks min={0} max={10} onChange={onChangeSlider} />
+      <Button variant="contained" onClick = {onCreateAccountButtonClick} sx={{ display: "block", marginLeft: "auto" }}>Next</Button>
+    </Container>
   );
 }

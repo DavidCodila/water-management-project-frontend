@@ -33,9 +33,9 @@ export default function AppartmentDetailsPage() {
   
   return (
     <Container maxWidth="sm">
-    <TextField id="peopleToAddTextField" label="People to add" sx={{ display: "flex", textAlign: 'center' }} onChange={(e) => setPeopleAdded(e.target.value)} />
+      <TextField id="peopleToAddTextField" label="People to add" sx={{ display: "flex", textAlign: 'center' }} onChange={(e) => setPeopleAdded(e.target.value)} />
       <Button variant="contained" onClick= {handleAppPeople}>App people</Button>
       <ButtonLink />
-  </Container>
+    </Container>
   );
 }
