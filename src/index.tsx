@@ -4,7 +4,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./styles.css";
 import CreateAccountPage from './CreateAccountPage.tsx';
 import AppPeopleToAccountPage from './AppPeopleToAccountPage.tsx';
 import PrintAccountBillPage from "./PrintAccountBillPage.tsx";
