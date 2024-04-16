@@ -8,7 +8,6 @@ export default function AppartmentDetailsPage() {
 
   function handleAppPeople() {
     const userID = id[id.length - 1];
-    console.log("User ID: " + userID);
     const peopleToAddJSON = {"peopleToAdd": peopleAdded}
     var URL = "http://localhost:81/water-accounts/" + userID;
     fetch(URL, {
@@ -20,13 +19,12 @@ export default function AppartmentDetailsPage() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(JSON.stringify(data));
-        alert("You added " + peopleAdded + " people to your account.")
+        //replace regex expression strips off (") form the start and end of the message
+        alert(JSON.stringify(data.response).replace(/^"(.+(?="$))"$/, '$1'))
       })
       .catch(error => {
         console.error(error);
       });
-    console.log("Number of people to add " + peopleAdded);
   }
 
   function ButtonLink() {

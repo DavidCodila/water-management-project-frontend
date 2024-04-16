@@ -1,19 +1,15 @@
 import React, { ChangeEvent } from 'react';
 import { useState } from 'react';
 import { Button, Container, FormControlLabel, FormLabel, Radio, RadioGroup, Slider } from '@mui/material';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import { router } from "./index.tsx"
 import { id } from "./id.tsx";
 
-function App() {
+export default function CreateAccountPage() {
   const ratioDefaultValue = 5;
   const [appartmentType, setAppartmentType] = useState("2BHK");
   const [corporationRatio, setCorporationRatio] = useState(5);
   const [borewellRatio, setBorewellRatio,] = useState(5);
-  const data = { appartmentType, corporationRatio, borewellRatio };
+  const accountData = { appartmentType, corporationRatio, borewellRatio };
 
   function onChangeAppartmentType(event: ChangeEvent<HTMLInputElement>, value: string): void {
     setAppartmentType(value);
@@ -31,16 +27,14 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(accountData),
       })
         .then(response => response.json())
         .then(data => {
-          console.log(data.accountId);
           id.push(data.accountId);
           router.navigate("/water-accounts");
         })
         .catch(error => {
-          console.log("Error occured")
           console.error(error);
         });
   }
@@ -64,5 +58,3 @@ function App() {
   </Container>
   );
 }
-
-export default App;

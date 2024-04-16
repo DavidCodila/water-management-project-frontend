@@ -24,7 +24,7 @@ export default function PrintBill() {
         .catch(error => {
           console.error(error);
           setWaterUser("Error");
-          setCost("Error")
+          setCost("Error");
         });
   }, [])
   return (
