@@ -3,7 +3,7 @@ import { Box, Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { id } from './id.tsx';
 
-export default function PrintBill() {
+export default function PrintAccountBillPage() {
   const [waterUsed, setWaterUser] = useState("");
   const [cost, setCost] = useState("");
 

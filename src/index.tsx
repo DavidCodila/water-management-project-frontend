@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CreateAccountPage from './CreateAccountPage.tsx';
-import AppPeopleToAccountPage from './AppPeopleToAccountPage.tsx';
+import AddPeopleToAccountPage from './AddPeopleToAccountPage.tsx';
 import PrintAccountBillPage from "./PrintAccountBillPage.tsx";
 
 export const router = createBrowserRouter([
@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "water-accounts",
-    element: <AppPeopleToAccountPage />,
+    element: <AddPeopleToAccountPage />,
   },
   {
     path: "billPage",

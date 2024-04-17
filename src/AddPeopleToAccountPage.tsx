@@ -3,7 +3,7 @@ import { Button, Container, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { id } from "./id.tsx";
 
-export default function AppartmentDetailsPage() {
+export default function AddPeopleToAccountPage() {
   const [peopleAdded, setPeopleAdded] = useState("");
 
   function handleAppPeople() {
