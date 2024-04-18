@@ -6,7 +6,7 @@ import { id } from "./id.tsx";
 export default function AddPeopleToAccountPage() {
   const [peopleAdded, setPeopleAdded] = useState("");
     function handleAppPeople() {
-      const userID = id[id.length - 1]+1;
+      const userID = id[id.length - 1];
       const peopleToAddJSON = {"peopleToAdd": peopleAdded};
       //var error;
       //const errorJson = {"error":error}
@@ -24,7 +24,9 @@ export default function AddPeopleToAccountPage() {
           if (data.response !== undefined) {
             alert(JSON.stringify(data.response).replace(/^"(.+(?="$))"$/, '$1'))
           }
-          alert(JSON.stringify(data.error))
+          else {
+            alert(JSON.stringify(data.error))
+          }
         })
         //does not enter into this blok of error occurs?
         .catch(error => {
