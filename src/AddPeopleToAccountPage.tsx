@@ -8,8 +8,6 @@ export default function AddPeopleToAccountPage() {
     function handleAppPeople() {
       const userID = id[id.length - 1];
       const peopleToAddJSON = {"peopleToAdd": peopleAdded};
-      //var error;
-      //const errorJson = {"error":error}
       var URL = "http://localhost:81/water-accounts/" + userID;
       fetch(URL, {
         method: 'PUT',

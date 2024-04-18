@@ -20,7 +20,6 @@ export default function PrintAccountBillPage() {
         .then(data => {
             setWaterUser(JSON.stringify(data.waterUsage));
             setCost(JSON.stringify(data.cost))
-            //alert(JSON.stringify(data.error))
         })
         .catch(error => {
           console.error(error);
