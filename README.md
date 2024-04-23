@@ -4,8 +4,8 @@
 <ol>
   <li>git clone git@github.com:TunaSalad343/water-management-project-frontend.git</li>
   <li>cd water-management-project-frontend</li>
-  <li>npm install</li>
-  <li>npm start</li>
+  <li>bun install</li>
+  <li>bun run start</li>
 </ol>
 <h3>Available Scripts</h3>
 <ul>
