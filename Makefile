@@ -1,10 +1,10 @@
 prepare: 
-	mkdir -p dist
+	mkdir -p build
 
 clean: prepare
-	rm -rf dist/*
+	rm -rf build/*
 
-dist/index.js: src/index.tsx
-	bun build $< --outdir $@
+dist/index.js:
+	bun run react-scripts build
 
 build: clean dist/index.js
