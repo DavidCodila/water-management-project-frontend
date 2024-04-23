@@ -7,3 +7,4 @@
   <li>bun install</li>
   <li>bun run start</li>
 </ol>
+<p>note: The frontend application can be found here: https://github.com/TunaSalad343/water-management-project-backend</p>
