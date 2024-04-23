@@ -7,12 +7,3 @@
   <li>bun install</li>
   <li>bun run start</li>
 </ol>
-<h3>Available Scripts</h3>
-<ul>
-  <li>npm start</li>
-  <p>Runs the app in the development mode.
-    Open: http://localhost:3000 to view it in your browser.
-    The page will reload when you make changes.</p>
-  <li>npm test</li>
-  <p>Launches the test runner in the interactive watch mode.</p>
-</ul>
