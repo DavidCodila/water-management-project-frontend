@@ -3,7 +3,7 @@
 <h3>How to install and run the project</h3>
 <ol>
   <li>git clone git@github.com:TunaSalad343/water-management-project-frontend.git</li>
-  <li>cd water-management-project-backend</li>
+  <li>cd water-management-project-frontend</li>
   <li>npm install</li>
   <li>npm start</li>
 </ol>
