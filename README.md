@@ -10,9 +10,9 @@
 <h3>Available Scripts</h3>
 <ul>
   <li>npm start</li>
-  <p>Runs the app in the development mode.</p>
-  <p>Open [http://localhost:3000](http://localhost:3000) to view it in your browser.</p>
-  <p>The page will reload when you make changes.</p>
+  <p>Runs the app in the development mode.
+    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    The page will reload when you make changes.</p>
   <li>npm test</li>
   <p>Launches the test runner in the interactive watch mode.</p>
 </ul>
